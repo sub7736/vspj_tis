@@ -1,2 +1,2 @@
-# vspj_tis
-Projekt do TIS
+# VŠPJ - TIS
+Závěrečný projekt do předmětu TIS
