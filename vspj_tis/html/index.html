@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Zdravím</title>
+    <title>Úvod</title>
 </head>
 <body>
+<a href="hardware.html">HW</a>
+<a href="software.html">SW</a>
 <form action="../php/form.php" method="post" name="Insert">
     <label>Budova:</label>
     <input type="text" name="budova">
     <label>Číslo učebny:</label>
     <input type="text" name="cislo_ucebny">
+    <select name="licence">
+        <option value="volvo">A</option>
+        <option value="saab">B</option>
+        <option value="fiat">E</option>
+        <option value="audi">V</option>
+    </select>
+    <select name="typ_hw">
+        <option value="desktop">Počítač</option>
+        <option value="laptop">Notebook</option>
+        <option value="monitor">Monitor</option>
+        <option value="network">Síťové prvky</option>
+        <option value="accessories">Příslušenství</option>
+        <!--        <option value="components">Komponenty</option>-->
+    </select>
     <input type="submit" name="submit" value="Přidat PC učebnu">
 </form>
 </body>
