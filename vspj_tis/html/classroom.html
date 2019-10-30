@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Učebny</title>
+</head>
+<body>
+<form action="../php/form.php" method="post" name="add_classroom">
+    <label>Budova:</label>
+    <select name="building">
+        <option value="build_a">A</option>
+        <option value="build_b">B</option>
+        <option value="build_c">E</option>
+        <option value="build_i">I</option>
+        <option value="build_l">L</option>
+        <option value="build_p">P</option>
+        <option value="build_v">V</option>
+    </select><br><br>
+    <label>Číslo učebny:</label>
+    <input type="number" min="1" name="cislo_ucebny"><br><br>
+    <input type="submit" name="submit" value="Přidat PC učebnu">
+</form>
+</body>
+</html>
