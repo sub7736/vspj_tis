@@ -1,5 +1,6 @@
 
 <?php
+//cesta k souboru bude asi jiná na serveru
 require("../dbmysqli/connect.php");
 $cr = $_GET['cr'];
 ?>
@@ -26,7 +27,7 @@ if (mysqli_num_rows($res_cr) > 0) {
 //// sql_dotaz = "select * from ucebny where oznaceni='$cr'"
 //// result = mysqli_num_rows($res_cr) > 0
 //// ve funkci bude if (mysqli_num_rows($res)>0) return $res; else return -1
-//// na konci mysqli.close();
+//// samostatnou funkci na mysqli.close();
 
 $sql_hw = "select * from hardware where ucebna_id='$id_cr'";
 $res_hw = mysqli_query($spojeni, $sql_hw);
