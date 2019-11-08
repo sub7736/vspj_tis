@@ -30,19 +30,38 @@ if (mysqli_num_rows($res_cr) > 0) {
 //// samostatnou funkci na mysqli.close();
 
 $sql_hw = "select * from hardware where ucebna_id='$id_cr'";
+$sql_sw = "select * from software where ucebna_id='$id_cr'";
 $res_hw = mysqli_query($spojeni, $sql_hw);
+$res_sw = mysqli_query($spojeni, $sql_sw);
 //echo $sql_hw;
 if (mysqli_num_rows($res_hw) > 0) {
     echo "<h3>Seznam používaného/dostupného HW:</h3>";
-    echo "<table width='800' border='1' style='border-collapse: collapse'><tr><th>Název</th><th>Celkem</th><th>Používaných</th><th>Typ</th><th>Výrobce ID</th><th>Popis</th></tr>";
+    echo "<table width='1000' border='1' style='border-collapse: collapse'><tr><th>Název</th><th>Celkem</th><th>Používaných</th><th>Typ</th><th>Výrobce ID</th><th>Popis</th><th>Smazat</th></tr>";
     while($radek_hw = mysqli_fetch_assoc($res_hw)):
         echo "<tr><td style='text-align: center'>".$radek_hw["nazev"]."</td>";
         echo "<td style='text-align: center'>".$radek_hw["pocet_celkem"]."</td>";
         echo "<td style='text-align: center'>".$radek_hw["pocet_pouzivanych"]."</td>";
         echo "<td style='text-align: center'>".$radek_hw["typ"]."</td>";
         echo "<td style='text-align: center'>".$radek_hw["vyrobce_id"]."</td>";
-        echo "<td style='text-align: center'>".$radek_hw["popis"]."</td></tr>";
+        echo "<td style='text-align: center'>".$radek_hw["popis"]."</td>";
+        echo "<td style='text-align: center'><a href='#'>Smazat ID:".$radek_hw["id"]."</a></td></tr>";
     endwhile;
+    echo "</table>";
+    echo "<a href='#'>Přidat HW</a>";
+}
+if (mysqli_num_rows($res_sw) > 0) {
+    echo "<h3>Seznam používaného/dostupného SW:</h3>";
+    echo "<table width='1000' border='1' style='border-collapse: collapse'><tr><th>Název</th><th>Celkem</th><th>Používaných</th><th>Licence</th><th>Výrobce ID</th><th>Popis</th><th>Smazat</th></tr>";
+    while($radek_sw = mysqli_fetch_assoc($res_sw)):
+        echo "<tr><td style='text-align: center'>".$radek_sw["nazev"]."</td>";
+        echo "<td style='text-align: center'>".$radek_sw["pocet_celkem"]."</td>";
+        echo "<td style='text-align: center'>".$radek_sw["pocet_pouzivanych"]."</td>";
+        echo "<td style='text-align: center'>".$radek_sw["licence"]."</td>";
+        echo "<td style='text-align: center'>".$radek_sw["vyrobce_id"]."</td>";
+        echo "<td style='text-align: center'>".$radek_sw["popis"]."</td>";
+        echo "<td style='text-align: center'><a href='#'>Smazat ID:".$radek_sw["id"]."</a></td></tr>";
+    endwhile;
+    echo "</table>";
 }
 mysqli_close($spojeni);
 
