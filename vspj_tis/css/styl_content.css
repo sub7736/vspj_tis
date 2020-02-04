@@ -1,0 +1,74 @@
+#content {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #b3cbcb;
+    padding: 2px 20px;
+}
+
+table {
+    font-size: 16px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table th {
+    color: white;
+}
+
+table th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+
+#seznam_hw {
+    width: 100%;
+    border: 1px solid #0059b3;
+}
+
+#seznam_sw {
+    width: 100%;
+    border: 1px solid #e68a00;
+}
+
+#seznam_vyrobce {
+    width: 60%;
+    border: 1px solid #999966;
+}
+  
+#seznam_hw th{
+    background-color: #0059b3;
+}
+
+#seznam_sw th{
+    background-color: #e68a00;   
+}
+
+#seznam_vyrobce th{
+    background-color: #009933;   
+}
+
+#seznam_hw tr:nth-child(odd) {
+    background-color: #cce6ff;
+}
+
+#seznam_sw tr:nth-child(odd) {
+    background-color: #ffcc99;
+}
+
+#seznam_vyrobce tr:nth-child(odd) {
+    background-color: #ebebe0;
+}
+
+#seznam_hw tr:nth-child(even) {
+    background-color: #e6f2ff;
+}
+
+#seznam_sw tr:nth-child(even) {
+    background-color: #ffe6cc;
+}
+
+#seznam_vyrobce tr:nth-child(even) {
+    background-color: #e0e0d1;
+}
